@@ -739,7 +739,7 @@ class Client:
 
     def _headers(self):
         token = self.generate_application_jwt()
-        return dict(self.headers, Authorization=b"Bearer " + token)
+        return dict(self.headers, Authorization="Bearer " + token)
 
     def generate_application_jwt(self, when=None):
         iat = int(when if when is not None else time.time())
